@@ -1,0 +1,95 @@
+.perfil{
+	width: 45px;
+	padding-top: 3%;
+	border-radius: 50%;
+}
+
+.or{
+	text-align: center;
+}
+
+.nombre{
+	text-decoration: none;
+	color: #777;
+}
+
+.nombre:hover{
+	text-decoration: none;
+	color: #000;
+}
+
+.icon{
+	text-align: center;	
+}
+
+.btn{
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+#fb{
+	border-color: #3B5998;
+	border-bottom-color: #263a63;
+	background-color: #3B5998;
+	color: #fff;
+	
+}
+
+#fb:hover{
+	border-color: #4568b2;
+	border-bottom-color: #2d4575;
+	background-color: #4568b2;
+	color: #fff;
+	
+}
+
+#login{
+	border-color: #ff5a5f;
+	border-bottom-color: #e00007;
+	background-color: #ff5a5f;
+	color: #fff;
+}
+
+#login:hover{
+	border-color: #ff7e82;
+	border-bottom-color: #fa0008;
+	background-color: #ff7e82;
+	color: #fff;
+}
+
+.fa{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.modal{
+	cursor: pointer;
+}
+.social{
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.social li{
+	padding: 0 20px;
+	display: inline-block;
+}
+.footer-icon{
+	display: block;
+	height: 36px;
+	width: 36px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 50%;
+	text-align: center;
+	border-color: #666;
+	border-color: rgba(255,255,255,0.2);
+}
+.social-icon{
+	color:#999;
+}
+.social-icon:hover{
+	color:#767676;
+}
