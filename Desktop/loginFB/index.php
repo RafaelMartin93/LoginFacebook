@@ -190,11 +190,11 @@
 			<div class="container">
 				<h2 style="text-align:center">Síguenos:</h2>
 				<ul class="social">
-					<li class="footer-icon"><a href="#" class="social-icon"><i style="font-size: 20px;text-align:center" class="fa fa-facebook"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon"><i style="font-size: 20px;text-align:center" class="fa fa-instagram"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon"><i style="font-size: 25px;text-align:center" class="fa fa-twitter"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon"><i style="font-size: 20px;text-align:center" class="fa fa-google-plus"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon"><i style="font-size: 20px;text-align:center" class="fa fa-github"></i></a></li>
+					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i style="font-size: 20px;text-align:center" class="fa fa-facebook"></i></a></li>
+					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i style="font-size: 20px;text-align:center" class="fa fa-instagram"></i></a></li>
+					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i style="font-size: 25px;text-align:center" class="fa fa-twitter"></i></a></li>
+					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Google+"><i style="font-size: 20px;text-align:center" class="fa fa-google-plus"></i></a></li>
+					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Código en GitHub"><i style="font-size: 20px;text-align:center" class="fa fa-github"></i></a></li>
 				</ul>			
 				<p>Diseñado por Rafael Martín & Eduardo Hernández.</p>
 			</div>
@@ -270,6 +270,8 @@
 					
 				});
 				
+
+				$('[data-toggle="tooltip"]').tooltip()
 				
 			});
 		</script>
