@@ -63,7 +63,8 @@
 	}
 
 	$loggedin = false;
-	
+	$login_url = $helper->getLoginUrl(array('email'));
+
 	//lCERRAMOS SESION
 	$logout = 'http://rmwebconsulting.com/apps/loginFB/index.php?logout=true';
 
