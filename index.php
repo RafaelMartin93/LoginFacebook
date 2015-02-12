@@ -63,7 +63,8 @@
 	}
 
 	$loggedin = false;
-	
+	$login_url = $helper->getLoginUrl(array('email'));
+
 	//lCERRAMOS SESION
 	$logout = 'http://rmwebconsulting.com/apps/loginFB/index.php?logout=true';
 
@@ -187,13 +188,9 @@
 		<footer class="bs-docs-footer" role="contentinfo">
 			
 			<div class="container">
-				<h2 style="text-align:center">Síguenos:</h2>
+				<h2 style="text-align:center">Nuestro código:</h2>
 				<ul class="social">
-					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i style="font-size: 20px;text-align:center" class="fa fa-facebook"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i style="font-size: 20px;text-align:center" class="fa fa-instagram"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i style="font-size: 25px;text-align:center" class="fa fa-twitter"></i></a></li>
-					<li class="footer-icon"><a href="#" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Google+"><i style="font-size: 20px;text-align:center" class="fa fa-google-plus"></i></a></li>
-					<li class="footer-icon"><a href="https://github.com/RafaelMartin93/LoginFacebook/tree/master/Desktop/loginFB" target="_blank" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Código en GitHub"><i style="font-size: 20px;text-align:center" class="fa fa-github"></i></a></li>
+					<li class="footer-icon"><a href="https://github.com/RafaelMartin93/LoginFacebook" target="_blank" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Código en GitHub"><i style="font-size: 20px;text-align:center" class="fa fa-github"></i></a></li>
 				</ul>			
 				<p>Diseñado por Rafael Martín & Eduardo Hernández.</p>
 			</div>
