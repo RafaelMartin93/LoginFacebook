@@ -186,16 +186,14 @@
 		</div>
 		
 		<footer class="bs-docs-footer" role="contentinfo">
-			
 			<div class="container">
 				<h2 style="text-align:center">Nuestro código:</h2>
 				<ul class="social">
-					<li class="footer-icon"><a href="https://github.com/RafaelMartin93/LoginFacebook" target="_blank" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Código en GitHub"><i style="font-size: 20px;text-align:center" class="fa fa-github"></i></a></li>
+					<li class="footer-icon"><a href="https://github.com/RafaelMartin93/LoginFacebook" target="_blank" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Código en GitHub"><i style="font-size: 24px;text-align:center" class="fa fa-github"></i></a></li>
 				</ul>			
 				<p>Diseñado por Rafael Martín & Eduardo Hernández.</p>
 			</div>
 		</footer>
-		
 		
 		<!-- Modal -->
 		<div  class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -206,8 +204,9 @@
 						<h4 class="modal-title" id="myModalLabel">Inicio sesión</h4>
 					</div>
 					<div class="modal-body">
-						<p style="text-align:center"><a href="<?php echo $login_url; ?>"><button style="width:100%" class="btn btn-primary" id="fb">Iniciar sesion con Facebook</button></a></p>
-						<p style="text-align:center">O</p>
+						<p><a href="<?php echo $login_url; ?>"><button class="btn btn-primary" id="fb"><i class="fa fa-facebook"></i> Iniciar sesion con Facebook</button></a></p>
+						<p><a href="#"><button class="btn btn-primary" id="gp"><i class="fa fa-google-plus"></i> Iniciar sesion con Google</button></a></p>
+						<hr/>
 						<form>
 							<div class="form-group">
 								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">

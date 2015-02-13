@@ -32,9 +32,15 @@
 	border-bottom-color: #263a63;
 	background-color: #3B5998;
 	color: #fff;
+	width:100%;
+}
+#gp{
+	border-color:#c4c4c4;
+	width: 100%;
+	background-color: #fff;
+	color:#565A5C;
 	
 }
-
 #fb:hover{
 	border-color: #4568b2;
 	border-bottom-color: #2d4575;
@@ -42,7 +48,23 @@
 	color: #fff;
 	
 }
-
+.fa.fa-facebook{
+	position: absolute;
+	font-size: 24px;
+	top: 20px;
+	left: 20px;
+}
+.fa.fa-google-plus{
+	color:#DD4B39;	
+	position: absolute;
+	font-size: 24px;
+	top: 65px;
+	left: 20px;
+}
+#gp:hover{
+	border-color:#aaa;
+	color:#565A5C;
+}
 #login{
 	border-color: #ff5a5f;
 	border-bottom-color: #e00007;
