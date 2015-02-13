@@ -100,6 +100,8 @@
 		<!-- Default Theme -->
 		<link rel="stylesheet" href="owl-carousel/owl.theme.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!--Icon-->
+		<link rel="shortcut icon" href="https://moodle.iespuertodelacruz.es/theme/standard/favicon.ico" />
   </head>
   <body>
   	<nav class="navbar navbar-default">
@@ -120,7 +122,7 @@
 					<ul class="nav navbar-nav navbar-right" >
 						<?php if(!$loggedin){ ?>
 						<li><a href="#">Regístrate</a></li>
-						<li><a class="modal" data-toggle="modal" data-target=".bs-example-modal-sm">Inciar sesión</a></li>
+						<li><a class="iniciosesion" data-toggle="modal" data-target=".bs-example-modal-sm">Inciar sesión</a></li>
 						<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ayuda<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -159,7 +161,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    
+    <!--SLIDER-->
 		<div id="owl-demo" class="owl-carousel owl-theme">
  
 			<div class="item"><img class="img-responsive" src="images/image1.jpg" ></div>
@@ -167,6 +169,7 @@
 			<div class="item"><img class="img-responsive" src="images/image3.jpg" ></div>
 
 		</div>
+		<!--/SLIDER-->
 		<div class="container">
 			<div class="col-md-4">
 				<h2 style="text-align:center"><i class="fa fa-bed"></i></h2>
@@ -174,12 +177,12 @@
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
 			<div class="col-md-4">
-				<h2 style="text-align:center"><i class="fa fa-globe"></i></h2>
-				<h4 style="text-align:center">Sentirse como en casa en cualquier rincón del mundo</h4>
+				<h2 style="text-align:center"><i class="fa fa-home"></i></h2>
+				<h4 style="text-align:center">A veces los lugares más increíbles están cerca de casa</h4>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
 			<div class="col-md-4">
-				<h2 style="text-align:center"><i class="fa fa-home"></i></h2>
+				<h2 style="text-align:center"><i class="fa fa-globe"></i></h2>
 				<h4 style="text-align:center">Tu casa es el mundo</h4>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
@@ -196,23 +199,19 @@
 		</footer>
 		
 		<!-- Modal -->
-		<div  class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div  class="modal fade bs-example-modal-sm" id="miModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Inicio sesión</h4>
-					</div>
 					<div class="modal-body">
-						<p><a href="<?php echo $login_url; ?>"><button class="btn btn-primary" id="fb"><i class="fa fa-facebook"></i> Iniciar sesion con Facebook</button></a></p>
-						<p><a href="#"><button class="btn btn-primary" id="gp"><i class="fa fa-google-plus"></i> Iniciar sesion con Google</button></a></p>
+						<p><a href="<?php echo $login_url; ?>"><button class="btn btn-primary" id="fb"><i class="fa fa-facebook"></i> Iniciar sesión con Facebook</button></a></p>
+						<p><a href="#"><button class="btn btn-primary" id="gp"><i class="fa fa-google-plus"></i> Iniciar sesión con Google</button></a></p>
 						<hr/>
 						<form>
 							<div class="form-group">
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+								<input type="email" id="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electrónico">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								<input type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
 							</div>
 							<div class="checkbox">
 								<label>
@@ -250,27 +249,13 @@
 
 				});
 				
-				$(document).ready(function(){
-					$("#nav").scrollspy({
-						min:$("#nav").offset().top,
-						onEnter:function(element,position){
-							$("#nav").addClass('fixed');							
-						},
-						onLeave: function(element, position){
-							$("#nav").removeClass('fixed');
-						}					
+				
+				$('[data-toggle="tooltip"]').tooltip();
+				
 						
-					});
-					
-					
-				});
-				
-
-				$('[data-toggle="tooltip"]').tooltip()
-				
 			});
+			
 		</script>
-		
 		
   </body>
 </html>
