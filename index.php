@@ -56,7 +56,11 @@
 	if(isset($_SESSION['fb_token'])){
 		$sess = new FacebookSession($_SESSION['fb_token']);
 		try{
+<<<<<<< HEAD
 			$sess->Validate($app_id, $app_secret);
+=======
+			$sess->Validate($id, $secret);
+>>>>>>> 9b19eedbf0d4c2dce5cf03480762b1eaa6709b62
 		}catch(FacebookAuthorizationException $e){
 			print_r($e);
 		}
